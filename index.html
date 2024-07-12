@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice to Text Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hero">
+        <h1>Voice to Text <span>Converter</span></h1>
+        <textarea id="text-input" placeholder="Converted text will appear here..."></textarea>
+        <div class="controls">
+            <label for="volume">Volume: </label>
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+            <label for="rate">Rate: </label>
+            <input type="range" id="rate" min="0.1" max="2" step="0.1" value="1">
+            <label for="pitch">Pitch: </label>
+            <input type="range" id="pitch" min="0" max="2" step="0.1" value="1">
+        </div>
+        <div class="action-buttons">
+            <button id="listen-btn">
+                <img src="images/play.png" alt="Play">Listen
+            </button>
+            <button id="pause-btn">Pause</button>
+            <button id="resume-btn">Resume</button>
+            <button id="stop-btn">Stop</button>
+            <button id="record-btn">Record</button>
+        </div>
+        <div id="analysis-results">
+            <h2>Analysis Results</h2>
+            <p>Sentiment: <span id="sentiment"></span></p>
+            <p>Number of Speakers: <span id="speaker-count"></span></p>
+            <p>Topics: <span id="topics"></span></p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
